@@ -1,0 +1,73 @@
+.user {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    'name buttons'
+    'email buttons';
+  gap: 0;
+  font-family: 'larsseit', sans-serif;
+}
+.user:nth-child(odd) {
+  background-color: #eee;
+}
+.user:nth-child(even) {
+  background-color: #fff;
+}
+.user > input {
+  font-family: inherit;
+}
+.user > .name {
+  grid-area: name;
+  padding: 0.5rem 2rem;
+  margin-bottom: 2px;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #333;
+}
+.user input.name {
+  margin: 0;
+}
+.user > .email {
+  grid-area: email;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #555;
+}
+.user > .buttons {
+  grid-area: buttons;
+  border-left: 1px solid #ddd;
+  display: grid;
+  place-content: center;
+  font-family: 'larsseit', sans-serif;
+}
+.user button {
+  font-size: 1.2rem;
+  padding: 0.25rem 2rem;
+  margin-block: 0.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  place-content: center;
+}
+.user .btnEdit {
+  background-color: cornflowerblue;
+  color: white;
+}
+.user .btnSave {
+  background-color: forestgreen;
+  color: white;
+}
+.user .btnDelete {
+  background-color: red;
+  color: white;
+}
+.user .btnCancel {
+  background-color: #444;
+  color: #eee;
+}
+.material-symbols-outlined {
+  margin-inline: 0 1rem;
+}
